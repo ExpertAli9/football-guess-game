@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guess game</title>
+<meta charset="utf-8">
+
+</head>
+
+<script>
+
+    
+var s;
+function sets(s){
+    return s;
+}
+
+function gets(){
+    s = sets(s); 
+}
+
+function first(v){
+    var f = document.getElementById('v1');
+    var a = document.getElementById('v22');
+    var b = document.getElementById('v33');
+    var s = document.getElementById('v44');
+    var f1 = document.getElementById('v55');
+    var a1 = document.getElementById('v66');
+    var b1 = document.getElementById('v77');
+    var s1 = document.getElementById('v88');
+    var f2 = document.getElementById('v99');
+    var a2 = document.getElementById('v100');
+    f.style.display="none";
+    a.style.display="none";
+    s.style.display="none";
+    b.style.display="none";
+    f1.style.display="none";
+    a1.style.display="none";
+    s1.style.display="none";
+    b1.style.display="none";
+    f2.style.display="none";
+    a2.style.display="none";
+    var c = document.getElementById(v);
+    c.style.display = "block";
+}
+
+function change(r,v,v1){
+    var f = document.getElementById('goal');
+    var a = document.getElementById('assist');
+    var b = document.getElementById(v);
+    var c = document.getElementById(v1);
+    var g = document.getElementById('ag');
+    g.style.transition="0.4s";
+    g.style.backgroundColor="rgba(255, 255, 255, 1)";
+    g.style.visibility="visible";
+
+    if(r === 0) {
+        b.style.transition="0.4s";
+        f.style.transition="0.4s";
+        a.style.transition="0.4s";
+        c.style.transition="0.4s";
+        f.style.backgroundColor = "red";
+        b.style.display = "none";
+        c.style.display = "block";
+        a.style.backgroundColor = "green";
+    }
+    else if (r === 1) {
+        b.style.transition="0.4s";
+        f.style.transition="0.4s";
+        a.style.transition="0.4s";
+        c.style.transition="0.4s";
+        f.style.backgroundColor = "green";
+        a.style.backgroundColor = "red";
+        b.style.display = "none";
+        c.style.display = "block";
+    }
+}
+var arr = [0,1,2,3,4,5,6,7,8,9];
+function goal(){
+    var f = document.getElementById('goal');
+    var a = document.getElementById('assist');
+    f.style.backgroundColor = "white";
+        a.style.backgroundColor = "white";
+        var g = document.getElementById('ag');
+        g.style.transition="0.4s";
+        g.style.backgroundColor="rgba(255, 255, 255, 0.2)";
+    g.style.visibility="visible";
+        
+    g.style.visibility="hidden";
+    if(arr.length > 0){
+        var e=Math.floor(Math.random() * arr.length);
+        var d = arr[e];
+    }
+    if(arr.length===0){
+    window.open('conactus.html','_blank');
+    }
+   
+
+     s = d;
+arr.splice(e,1);
+ 
+        
+       
+       
+        
+        if(d === 0){
+            first('v');
+            
+        }
+        if(d === 1){
+            first('v2');
+            
+        }
+        if(d === 2){
+            first('v3');
+            
+        }
+        if(d === 3){
+            first('v4');
+            
+        }
+        if(d === 4){
+            first('v5');
+            
+        }
+        if(d === 5){
+            first('v6');
+            
+        }
+        if(d === 6){
+            first('v7');
+            
+        }
+        if(d === 7){
+            first('v8');
+            
+        }
+        if(d === 8){
+            first('v9');
+            
+        }
+        if(d === 9){
+            first('v10');
+            
+        }
+}
+
+window.onload = function(){
+    goal();
+};  
+
+function goall(){
+    gets();
+    if(s === 0) {
+        change(0, 'v', 'v1');
+    }
+    if(s === 1) {
+        change(1, 'v2', 'v22');
+    }
+    if(s === 2) {
+        change(1, 'v3', 'v33');
+    }
+    if(s === 3) {
+        change(0, 'v4', 'v44');
+    }
+    if(s === 4) {
+        change(1, 'v5', 'v55');
+    }
+    if(s === 5) {
+        change(1, 'v6', 'v66');
+    }
+    if(s === 6) {
+        change(1, 'v7', 'v77');
+    }
+    if(s === 7) {
+        change(0, 'v8', 'v88');
+    }
+    if(s === 8) {
+        change(1, 'v9', 'v99');
+    }
+    if(s === 9) {
+        change(1, 'v10', 'v100');
+    }
+  
+}
+</script>
+
+<style>
+video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.d2{
+    width: 500px;
+    height: 330px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(228, 225, 225, 0.023);
+    border-radius: 20px;
+    margin-left: 35px;
+    margin-top: 70px;
+    padding-top: 30px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.n{
+    z-index: 12;
+    display: flex;
+    position: fixed;
+   top: 0%;
+    width: 100%;
+    color: rgb(197, 199, 200);
+   background-color: rgb(59, 56, 56);
+   align-items: center;
+   justify-content: space-between;
+    
+}
+.nx{
+    border: 2px white solid transparent;
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: aliceblue;
+    
+
+   
+}
+.logo{
+height: 40px;
+}
+.navw{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+.nx:hover{
+    transition: 0.5s;
+    font-size: large;
+   background-color: transparent;
+   color:white;
+    text-decoration:  black;
+    border: 2px white dashed;
+}
+
+</style>
+
+<body>
+    <nav class="n">
+        <div>
+<img class="logo" src="R.png" alt=""></div>
+<div class="navw">
+    <a class="nx"   href="fgg.html">Guess game</a>
+<a class="nx" id="Home" href="f.p.html">Home</a>
+<a class="nx" href="conactus.html">contact us</a>
+</nav> 
+<div>
+    <video id="v"   src="cs.mp4" autoplay loop muted>. </video>
+    <video id="v1"  src="cs1.mp4" autoplay loop muted>.</video>
+    <video id="v2"  src="v2.mp4" autoplay muted loop>.</video>
+    <video id="v22" src="v22.mp4"  autoplay muted loop>.</video>
+    <video id="v3"  src="v3.mp4" autoplay loop muted>. </video>
+    <video id="v33" src="v33.mp4" autoplay loop muted>.</video>
+    <video id="v4"  src="v4.mp4"  autoplay muted loop>.</video>
+    <video id="v44" src="v44.mp4"  autoplay muted loop>.</video>
+    <video id="v5"   src="v5.mp4" autoplay loop muted>. </video>
+    <video id="v55"  src="v55.mp4" autoplay loop muted>.</video>
+    <video id="v6"  src="v6.mp4" autoplay muted loop>.</video>
+    <video id="v66" src="v66.mp4"  autoplay muted loop>.</video>
+    <video id="v7"  src="v7.mp4" autoplay loop muted>. </video>
+    <video id="v77" src="v77.mp4" autoplay loop muted>.</video>
+    <video id="v8"  src="v8.mp4" autoplay loop muted>. </video>
+    <video id="v88" src="v88.mp4" autoplay loop muted>.</video>
+    <video id="v9"  src="v9.mp4"  autoplay muted loop>.</video>
+    <video id="v99" src="v99.mp4"  autoplay muted loop>.</video>
+    <video id="v10"  src="v10.mp4"  autoplay muted loop>.</video>
+    <video id="v100" src="v100.mp4"  autoplay muted loop>.</video>
+
+</div>
+
+<div class="d2">
+    <button id="goal" onclick="goall();">Goal</button>
+    <button id="assist" onclick="goall();">Assist</button>
+    <button id="ag" onclick="goal()">next</button>
+</div>    
+
+</body>
+</html>
